@@ -1,0 +1,97 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #253546;
+  padding: 20px;
+}
+
+/* Layout container */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Base card style */
+.contact-card {
+  width: 100%;
+  border: 4px solid #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 15px;
+}
+
+/* Logo */
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo-container img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Info section */
+.contact-info {
+  margin-left: 15px;
+}
+
+.contact-info p {
+  font-size: 1em;
+}
+
+.contact-card.whatsapp {
+  background: linear-gradient(to bottom, #25D366, #128C7E);
+  color: #fff;
+}
+
+.contact-card.instagram {
+  background: linear-gradient(to bottom, #E4405F, #C13584);
+  color: #fff;
+}
+
+.contact-card.whatsapp:hover {
+  background: linear-gradient(to bottom, #128C7E, #25D366);
+}
+
+.contact-card.instagram:hover {
+  background: linear-gradient(to bottom, #C13584, #E4405F);
+}
+
+/* --- Responsive widths --- */
+
+/* Up to 600px → full width */
+@media (max-width: 599px) {
+  .contact-card {
+      width: 100%;
+  }
+}
+
+/* 600–899px → 2 columns */
+@media (min-width: 600px) and (max-width: 899px) {
+  .contact-card {
+      width: calc(50% - 20px);
+  }
+}
+
+/* 900px+ → tiled 300px max */
+@media (min-width: 900px) {
+  .contact-card {
+      width: 300px;
+  }
+}
